@@ -1774,11 +1774,17 @@ function updateProgressBar() {
 }
 
 // Scroll event listener for progress bar and scroll info
+// Scroll event listener for progress bar and scroll info
 document.addEventListener('scroll', function() {
     updateProgressBar();
     const scrollPosition = window.scrollY;
     const scrollInfo = document.getElementById('scroll-info');
-    scrollInfo.textContent = 'You have scrolled ' + scrollPosition + ' pixels';
+    
+    if (scrollInfo) {  // Check if scrollInfo exists
+        scrollInfo.textContent = 'You have scrolled ' + scrollPosition + ' pixels';
+    } else {
+        console.error('Element with ID "scroll-info" not found.');
+    }
 });
 
 // Smooth scrolling for navigation links and active link highlight
@@ -1787,14 +1793,19 @@ document.querySelectorAll('nav a').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href').slice(1);
         const targetSection = document.getElementById(targetId);
-        targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.classList.remove('active');
-        });
-        this.classList.add('active');
+        
+        if (targetSection) {  // Ensure target section exists
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            this.classList.add('active');
+        } else {
+            console.error('Target section with ID "' + targetId + '" not found.');
+        }
     });
 });
 
@@ -1819,6 +1830,7 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
 
 // Display event marquee
 document.addEventListener("DOMContentLoaded", function() {
