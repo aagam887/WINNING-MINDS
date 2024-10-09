@@ -988,4 +988,91 @@ header {
     min-height: 200px; /* Allow height to adjust based on content */
 }
 
+
+/*BACKCHODI*/
+
+/* Style for the personality grid */
+.personality-grid {
+    display: flex;                 /* Use flexbox for layout */
+    justify-content: center;       /* Center the items horizontally */
+    gap: 20px;                    /* Default gap between circles */
+    flex-wrap: wrap;              /* Allow items to wrap to the next line */
+    padding-bottom: 40px;         /* Add space below the last row */
+}
+
+/* Style for individual personality circles */
+.personality-circle {
+    position: relative;            /* Required for absolute positioning of pseudo-elements */
+    width: 190px;                 /* Width of the circle card */
+    height: 254px;                /* Height of the circle card */
+    margin: 20px;                 /* Add margin around each circle for additional space */
+    text-align: center;           /* Center the text below the image */
+    color: #fff;                  /* Text color */
+    transition: 0.5s;             /* Transition for smooth hovering effect */
+    cursor: pointer;              /* Pointer cursor on hover */
+}
+
+.personality-circle:hover {
+    transform: translateY(-20px); /* Move the circle up on hover */
+}
+
+/* Style for the images in the circles */
+.circle-img {
+    width: 150px;                 /* Fixed width for images */
+    height: 150px;                /* Fixed height for images */
+    object-fit: cover;            /* Cover the circle without distortion */
+    border-radius: 50%;           /* Make images circular */
+    position: relative;           /* Required for positioning pseudo-elements */
+}
+
+/* Pseudo-elements for hover effect */
+.personality-circle::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+    border-radius: 1.2em;       /* Rounded corners */
+    z-index: 1;                  /* Behind the content */
+}
+
+.personality-circle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    filter: blur(20px);         /* Subtle blur effect */
+    z-index: 0;                  /* Behind the content */
+}
+
+.personality-circle span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+     
+    z-index: 2;                  /* Above the gradient background */
+    border-radius: 1em;          /* Rounded corners */
+}
+
+/* Inner content style */
+.content {
+    position: relative;
+    padding: 10px;
+    z-index: 10;                /* Ensure content is above the gradient */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;           /* Bold text */
+    font-size: 1.5em;          /* Font size */
+}
+
     
