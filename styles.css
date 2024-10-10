@@ -1072,9 +1072,9 @@ header {
 
 
 /* From Uiverse.io by Fcodingx */ 
-.card {
-    width:95%; /* Keeps the width the same as requested */
-    padding:1rem;
+.cards {
+    width:90%; /* Keeps the width the same as requested */
+    padding:2rem;
     background: rgba(50, 50, 50, 0.85); /* Darker background for better text visibility */
     border-radius: 8px;
     backdrop-filter: blur(5px);
@@ -1086,12 +1086,15 @@ header {
     overflow: hidden;
     color: #f1f1f1; /* Brighter text for contrast */
     margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   
-  .card:hover {
+  .cards:hover {
     height: auto; /* To adjust for content expansion */
     transform: skew(0deg);
     background: rgba(50, 50, 50, 1); /* Solid background on hover for clarity */
+    
   }
   
   .align {
@@ -1121,13 +1124,13 @@ header {
     background-color: #00ca4e;
   }
   
-  .card h1 {
+  .cards h1 {
     text-align: center;
     color: #ffffff; /* Brighter header for better readability */
     text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
   }
   
-  .card p {
+  .cards p {
     color: #e0e0e0; /* Adjust text color for better visibility */
     margin: 0.5rem 0;
     text-align: justify; /* Aligns text properly */
@@ -1456,8 +1459,8 @@ ul {
   .card {
     display: block;
     position: relative;
-    max-width: 300px;
-    max-height: 520px;
+    width: 85%;
+    
     background-color: #f2f8f9;
     border-radius: 10px;
     padding: 2em 1.2em;
@@ -1517,4 +1520,13 @@ ul {
     color: #ffffff; /* White text for readability */
   }
   
- 
+  .card:hover {
+    height: auto; /* To adjust for content expansion */
+    transform: skew(0deg);
+    background: rgba(50, 50, 50, 1); /* Solid background on hover for clarity */
+    transform: skewX(10deg);
+    transition: 0.4s;
+    overflow: hidden;
+  }
+
+  
