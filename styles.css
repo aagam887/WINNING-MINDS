@@ -812,57 +812,91 @@ ul.menu {
     display: none; /* Ensure this is not overriding your JavaScript */
 }
  /* Comment Section Container */
- .comment-section {
-        padding: 20px;
-        background-color: #f9f9f9;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        max-width: 700px;
-        margin: 20px auto;
-    }
+ /* General styles for the body */
+body {
+    font-family: 'Arial', sans-serif; /* Change font if needed */
+    background-color: #f0f0f0; /* Light background for the overall page */
+}
 
-    /* Style for the Comment Heading */
-    #comments-section h3 {
-        font-size: 1.5em;
-        color: #444;
-        margin-bottom: 15px;
-    }
+/* Comment Section Container */
+.comment-section {
+    padding: 20px;
+    background-color: #ffffff; /* White background for the comment section */
+    border-radius: 12px; /* Rounded corners */
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+}
 
-    /* Style for the textarea (comment box) */
-    #comment-box {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        font-size: 1em;
-    }
+/* Style for the Comment Heading */
+#comments-section h3, .comment-section h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center; /* Center-align the headings */
+}
 
-    /* Style for the submit button */
-    #comment-form button {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1em;
-    }
+/* Style for the textarea (comment box) */
+#comment-box {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px;
+    font-size: 1em;
+    background-color: #f9f9f9; /* Light grey background for input */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Inset shadow */
+    transition: border-color 0.3s;
+}
 
-    #comment-form button:hover {
-        background-color: #0056b3;
-    }
+#comment-box:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
 
-    /* Style for displaying comments(AAGAM) */
-    #comments-display p {
-        background-color: #fff;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        font-size: 0.95em;
-        color: #333;
-    }
+/* Style for the submit button */
+
+#comment-form button {
+    background: linear-gradient(90deg, #007bff, #0056b3); /* Gradient background */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px; /* Rounded pill button */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto; /* Center button */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3); /* Soft shadow */
+}
+
+#comment-form button:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 8px 24px rgba(0, 123, 255, 0.5); /* Darker shadow on hover */
+}
+
+/* Style for displaying comments */
+#comments-display {
+    margin-top: 20px; /* Space between form and comments */
+}
+
+#comments-display p {
+    background-color: #fff;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    transition: background-color 0.3s;
+}
+
+#comments-display p:hover {
+    background-color: #f1f1f1; /* Change background on hover */
+}
+
     .personality-row {
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
@@ -1417,7 +1451,7 @@ ul {
 
 
 .card-title {
-    color: #262626;
+    color: white;
     font-size: 1.5em;
     line-height: normal;
     font-weight: 700;
@@ -1530,3 +1564,6 @@ ul {
   }
 
   
+  #contact-content{
+    background-color:#000000;
+  }
